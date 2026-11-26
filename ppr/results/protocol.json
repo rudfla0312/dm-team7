@@ -1,0 +1,31 @@
+{
+  "alphas": [
+    0.5,
+    0.65,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "budgets": [
+    0.5,
+    0.75,
+    0.9,
+    0.95
+  ],
+  "search": "select basic alpha first; select weighted budget at that alpha",
+  "selection": "validation macro NDCG@10, Recall@10 tie break, then label",
+  "score_policy": "positive PPR scores only; prefilter known and conflict pairs; top 100",
+  "test_fit": "train+validation",
+  "test_retuning": false,
+  "workers": 4,
+  "tolerance": 1e-10,
+  "runtime_scope": "graph construction + reweighting + inference; exclude data reads and evaluator",
+  "data_hashes": {
+    "team_split.csv": "7514f8a689313d6f01827f1ddffe9b527334784132eb4a36edf406d65cb2d380",
+    "contraindication_conflicts.csv": "fdb96c5bc6774ab1ea0c63ed247cc89edcc7565f127b21ec572af7355bf385ce",
+    "disease_gene.csv": "fabc594be7ab439f90d3519c8c1fb1cfcb46609dc2267c3d9173fede614d1229",
+    "drug_gene.csv": "cedeaa3f2a067da74afa88b7d775c7521eb4f1184e9bebaea8df291a2c8a9654"
+  }
+}

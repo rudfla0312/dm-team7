@@ -1,0 +1,21 @@
+{
+  "stage": "test",
+  "fit": "trainval",
+  "evaluation_diseases": 1661,
+  "candidate_drugs": 9065,
+  "positive_pairs": 11477,
+  "positives_outside_candidates": 933,
+  "diseases_with_any_recommendation": 1659,
+  "ignored_score_rows": 0,
+  "runtime_seconds": 24.731406333987252,
+  "query_coverage": 0.9987959060806743,
+  "recall@10": 0.3116282719583326,
+  "ndcg@10": 0.2833849731264186,
+  "catalog_coverage@10": 0.16833976833976835,
+  "recall@50": 0.5118273651343546,
+  "ndcg@50": 0.32936513407364915,
+  "catalog_coverage@50": 0.3752895752895753,
+  "recall@100": 0.610359771450738,
+  "ndcg@100": 0.3538782136099679,
+  "catalog_coverage@100": 0.4965250965250965
+}

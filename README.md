@@ -5,7 +5,7 @@
 - common/: shared split preparation, feature preparation and evaluation.
 - cbf/: content-based filtering.
 - louvain/: Louvain runner, helpers and community-boundary analysis.
-- ppr/: personalized PageRank.
+- ppr/: final common-evaluation PPR code and recorded results; see [ppr/README.md](ppr/README.md).
 - svd/: normalized SVD runner.
 
 ## Reproducing the shared split and Louvain/SVD results
