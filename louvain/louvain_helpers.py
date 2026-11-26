@@ -1,4 +1,4 @@
-"""Shared experiment helpers from the original Louvain and SVD runs."""
+"""Helpers for Louvain similarity graphs and community experiments."""
 from collections import defaultdict
 import csv
 import networkx as nx
