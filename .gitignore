@@ -222,3 +222,7 @@ __marimo__/
 # Local inputs, generated splits and model outputs
 /data/
 /outputs/
+
+# PPR local data and fresh reproduction outputs
+/ppr/data/
+/ppr/run_results/
