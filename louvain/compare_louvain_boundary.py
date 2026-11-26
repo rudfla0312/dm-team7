@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 from scipy.sparse import csr_matrix
 
-from run_own_algorithms import evaluate, matrix, read, write_scores
+from run_louvain import evaluate, matrix, read, write_scores
 from louvain_helpers import (build_graph, communities_for, feature_similarities,
                              group_weights, sorted_similarity_rows)
 
