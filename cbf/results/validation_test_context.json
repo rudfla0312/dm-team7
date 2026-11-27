@@ -1,0 +1,18 @@
+{
+  "validation": {
+    "fitting_pairs": 35068,
+    "evaluation_pairs": 11290,
+    "evaluation_diseases": 1474,
+    "candidate_drugs": 8053,
+    "ndcg@10": 0.14616670313736602
+  },
+  "test": {
+    "fitting_pairs": 46358,
+    "evaluation_pairs": 11477,
+    "evaluation_diseases": 1661,
+    "candidate_drugs": 9065,
+    "ndcg@10": 0.17821714852961462
+  },
+  "ndcg@10_difference_test_minus_validation": 0.032050445392248605,
+  "interpretation": "Test uses more fitting indications and a larger candidate catalog, and Validation/Test involve different diseases and held-out pairs. More fitting data is a plausible contributor to the higher Test score, but this comparison alone does not establish causality or significance. Test was not used for parameter selection."
+}

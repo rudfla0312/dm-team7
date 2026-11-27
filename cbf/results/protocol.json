@@ -1,0 +1,61 @@
+{
+  "algorithm": "strict CBF: disease-gene cosine similarity and fitting indication transfer",
+  "seed": 42,
+  "split_counts": {
+    "train": 35068,
+    "test": 11477,
+    "validation": 11290
+  },
+  "team_input_sha256": {
+    "team_split.csv": "7514f8a689313d6f01827f1ddffe9b527334784132eb4a36edf406d65cb2d380",
+    "contraindication_conflicts.csv": "fdb96c5bc6774ab1ea0c63ed247cc89edcc7565f127b21ec572af7355bf385ce",
+    "disease_gene.csv": "fabc594be7ab439f90d3519c8c1fb1cfcb46609dc2267c3d9173fede614d1229"
+  },
+  "feature_threshold": 0.3,
+  "feature_idf_formula": "ln((N+1)/(df+1))+1; N=unique diseases in full disease_gene input",
+  "idf_disease_count_N": 16402,
+  "profile_shape": [
+    2327,
+    17104
+  ],
+  "grid": {
+    "weighting": [
+      "raw",
+      "idf"
+    ],
+    "k": [
+      10,
+      20,
+      50
+    ],
+    "p": [
+      1,
+      2
+    ]
+  },
+  "selection": "Validation macro NDCG@10; Recall@10 ties; then p, k, Raw before IDF",
+  "selected": {
+    "feature_mode": "idf",
+    "k": 50,
+    "p": 2
+  },
+  "fit_rule": "Validation=train only; Test=train+validation; Test evaluated once",
+  "score_policy": "positive score; fitting catalog; filter own indications and 339 conflicts; top 100; drug-ID tie",
+  "popularity_fallback": false,
+  "drug_gene_used_in_cbf_scoring": false,
+  "runtime_scope": "profile construction + final fitting and top-100 CSV export; excludes raw CSV preparation, validation tuning, evaluator",
+  "runtime_seconds": 2.829722323999931,
+  "validation_tuning_seconds": 4.859974831000045,
+  "software": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0",
+    "matplotlib": "3.10.8"
+  },
+  "test_not_used_for_parameter_selection": true,
+  "feature_scope": "Transductive: IDF N and df include all diseases in provided gene data, including evaluation diseases; no held-out indication labels are used for IDF",
+  "similarity_storage": "dense pairwise disease similarity array, O(D^2) memory and work; D=2327",
+  "statistical_comparison": "paired validation bootstrap; exploratory post-selection intervals, not confirmatory hypothesis test"
+}

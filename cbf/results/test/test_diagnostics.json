@@ -1,0 +1,16 @@
+{
+  "test_diseases": 1661,
+  "failure_reasons": {
+    "no_gene_features": 234,
+    "recommended": 1427
+  },
+  "candidate_drugs": 9065,
+  "positives_outside_candidates": 933,
+  "positive_pairs": 11477,
+  "unrankable_positive_pair_fraction": 0.08129302082425721,
+  "oracle_macro_recall_ceiling_from_catalog_only": 0.9448253300361676,
+  "macro_recall_ceiling_note": "This is an upper bound from catalog availability only, ignoring rank-K capacity and model scoring. It is not an achievable CBF score.",
+  "catalog_coverage@10": 0.219415333701048,
+  "popularity_catalog_coverage@10": 0.005184776613348042,
+  "comparison_note": "Catalog coverage is breadth of distinct recommended drugs, not clinical diversity."
+}

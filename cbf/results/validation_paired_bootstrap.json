@@ -1,0 +1,54 @@
+{
+  "method": "paired percentile bootstrap resampling validation diseases",
+  "seed": 42,
+  "bootstrap_samples": 2000,
+  "significance_note": "Exploratory intervals only: configurations were selected on these same Validation diseases, and multiple comparisons were explored. A CI excluding zero is not a post-selection significance guarantee.",
+  "comparisons": [
+    {
+      "comparison": "runner_up",
+      "selected": {
+        "feature_mode": "idf",
+        "k": 50,
+        "p": 2
+      },
+      "challenger": {
+        "feature_mode": "idf",
+        "k": 20,
+        "p": 1
+      },
+      "n_paired_validation_diseases": 1474,
+      "mean_delta_ndcg@10": 0.001197443761328151,
+      "mean_delta_recall@10": 0.004831306459037627,
+      "ndcg@10_paired_bootstrap_ci95": [
+        -0.0033894542479447377,
+        0.005516684337444588
+      ],
+      "positive_difference_diseases": 285,
+      "negative_difference_diseases": 260,
+      "equal_difference_diseases": 929
+    },
+    {
+      "comparison": "matched_raw_vs_idf",
+      "selected": {
+        "feature_mode": "idf",
+        "k": 50,
+        "p": 2
+      },
+      "challenger": {
+        "feature_mode": "raw",
+        "k": 50,
+        "p": 2
+      },
+      "n_paired_validation_diseases": 1474,
+      "mean_delta_ndcg@10": 0.0013999002807759686,
+      "mean_delta_recall@10": 5.736454519127978e-05,
+      "ndcg@10_paired_bootstrap_ci95": [
+        -0.0012720197227683297,
+        0.004070995010325858
+      ],
+      "positive_difference_diseases": 199,
+      "negative_difference_diseases": 173,
+      "equal_difference_diseases": 1102
+    }
+  ]
+}
